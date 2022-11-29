@@ -1,32 +1,39 @@
 <html>
   <head>
-    <title>Orbit Manual</title>
+    <title>Orbit Release Notes</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Orbit Release Notes</h1>
+    <div class="topnav">
+      <a href="./index.html">Home</a>
+      <a href="./siga.html">Synthetic Instrument Generation</a>
+      <a href="./orbit.html">Orbit</a>
+      <a class="active" href="./notes.html">Orbit Release Notes</a>
+    </div>
+    <div style="position: fixed; left: 4vw; width:92vw;height:90vh;border:0px;background-color:rgb(230, 230, 230);z-index:-1;padding: 2vw;">
+    <h3>Orbit Release Notes</h3>
+      
+      <h5>V1.01 Notes</h5>
+      - Fixed GUI lag due to constant repainting of window.
     
-    <a href="./index.html"> Home
-    </a>
+      <h5>V1.02 Notes</h5>
+      - Fixed Ping Pong mode so that it accurately jumps from left to right instead of slowly summing to mono.
+      <br>
+      - Width is now wider and goes up to 1000 samples of delay.
+      <br>
+      - The mod now goes to 4 Hz, and uses a new more intensive algorithm. It now should sound less harsh.
+      <br>
+      - Fixed shading on buttons when hovered over.
+      <br>
+      - Peaking filters now are wide Q.
+      <br>
+      - HPF and LPF now go from 20 - 10000 Hz, it felt pointless for them to go higher.
+      <br>
+      - Feedback can now go up to 1.0, which is an infinite delay.
+      <br>
+      - Gain rescaled to go to 8.0, unity is now 4.0.
+      </body>
+    </div>
 
 
-  <h2>V1.01 Notes</h2>
-  - Fixed GUI lag due to constant repainting of window.
-
-  <h2>V1.02 Notes</h2>
-  - Fixed Ping Pong mode so that it accurately jumps from left to right instead of slowly summing to mono.
-  <br>
-  - Width is now wider and goes up to 1000 samples of delay.
-  <br>
-  - The mod now goes to 4 Hz, and uses a new more intensive algorithm. It now should sound less harsh.
-  <br>
-  - Fixed shading on buttons when hovered over.
-  <br>
-  - Peaking filters now are wide Q.
-  <br>
-  - HPF and LPF now go from 20 - 10000 Hz, it felt pointless for them to go higher.
-  <br>
-  - Feedback can now go up to 1.0, which is an infinite delay.
-  <br>
-  - Gain rescaled to go to 8.0, unity is now 4.0.
-  </body>
 </html>
