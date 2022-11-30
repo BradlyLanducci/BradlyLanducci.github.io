@@ -4,6 +4,13 @@ body {
     background-image: linear-gradient(white, darkgrey,darkgrey,darkgrey,darkgrey, rgb(41, 41, 41));
 
   }
+
+  img {
+    position: relative;
+    z-index: -2;
+    max-width:100%;
+    height: auto;
+  }
   
   .topnav {
     overflow: hidden;
@@ -31,4 +38,18 @@ body {
 
   li {
     list-style-type: none;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%
+  }
+
+  .center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
   }
