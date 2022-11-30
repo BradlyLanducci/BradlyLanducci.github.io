@@ -1,2 +1,2 @@
 # BradlyLanducci.github.io
-Manual for Orbit delay plugin. Available in VST3 format.
+Bradly Landucci Portfolio Site
