@@ -6,11 +6,11 @@ function SIG(props) {
         <div className="left-column">
           <figure>
             <figcaption >SIG Model</figcaption>
-            <img src= "./model.jpg"/>
+            <img src= "./model.JPG"/>
           </figure>
           <figure>
             <figcaption>SIG Website</figcaption>
-            <img src= "./sig.jpg"/>
+            <img src= "./SIG.JPG"/>
           </figure>
           <figure>
           <figcaption>Sound Examples</figcaption>
