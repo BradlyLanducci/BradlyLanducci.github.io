@@ -1,18 +1,3 @@
-import {NavLink} from "react-router-dom";
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom" 
-
-function Sidebar(props) {
-  return (
-    <>
-      <div>
-        <NavLink className = "sideItem" to="/synthetic-instrument-generation/purpose">Purpose</NavLink>
-        <NavLink className = "sideItem" to="/synthetic-instrument-generation/model">Model</NavLink>
-        <NavLink className = "sideItem" to="/synthetic-instrument-generation/website">Website</NavLink>
-      </div>
-    </>
-  )
-}
-
 function SIG(props) {
     return (
       <>
