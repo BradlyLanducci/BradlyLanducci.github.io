@@ -40,10 +40,6 @@ function Home(props) {
         </h1>
         <DownloadCV/>
       </div>
-      {/* <div class="container">
-        <div class="box">Test</div>
-        <div class="box">Test2</div>
-      </div> */}
     </>
   )
 }
