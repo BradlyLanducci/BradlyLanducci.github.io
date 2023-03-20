@@ -3,28 +3,6 @@ function SIG(props) {
       <>
         <div>
           <div className="container_sig">
-        <div className="left-column">
-          <figure>
-            <figcaption >SIG Model</figcaption>
-            <img src= "./model.JPG"/>
-          </figure>
-          <figure>
-            <figcaption>SIG Website</figcaption>
-            <img src= "./SIG.JPG"/>
-          </figure>
-          <figure>
-          <figcaption>Sound Examples</figcaption>
-            <audio controls>
-              <source src="./sound_1.mp3" type="audio/mpeg"/>
-              Your browser does not support the audio element.
-            </audio>
-            <audio controls>
-            <source src="./sound_2.mp3" type="audio/mpeg"/>
-            Your browser does not support the audio element.
-          </audio>
-          </figure>
-
-        </div>
         <div className="right-column">
           <h1>Synthetic Instrument Generation</h1>
           <p className = "leftText">
@@ -38,7 +16,7 @@ function SIG(props) {
             </p>
             <br/>
             <h2>Genetic Algorithm</h2>
-            <p className = "leftText">
+            <div className = "leftText">
               The main idea behind our project is to simulate evolution in creating production ready musical instruments.
               This poses a lot of challenges. How does one make instruments sound good starting from a random set of frequencies?
               Humans inherently have a great ear for discerning what sounds good or not. This is because music theory is based off
@@ -54,15 +32,12 @@ function SIG(props) {
               There are various methods we'd like to change in the genetic algorithm in the model. It's currently setup so that there are constants
               that determine which methods to use. This makes it easy to change for testing purposes. Here some of the methods are as follows:
               <br/><br/>
-              <h3>Selection Methods</h3>
               <p>
                 The selection methods include: tournament, elitism, variety, roulette, and ranking.
               </p>
-              <h3>Crossover Methods</h3>
               <p>
                 The crossover methods include: Normal crossover, uniform crossover, deep uniform crossover.
               </p>
-              <h3>Mutation Methods</h3>
               <p>
                 The mutation methods include: mutate genes, mutate member, mutate individual weighting.
               </p>
@@ -79,17 +54,39 @@ function SIG(props) {
               generation and goes to the next one sequentially. In the final product this will instead be more random.
               A large part about simulating evolution is introducing randomness at all steps. This will help introduce
               diversity into the populations.
-            </p>
+            </div>
+          </div>
+          <div className="left-column">
+            <figure>
+              <figcaption >SIG Model</figcaption>
+              <img src= "./model.JPG"/>
+            </figure>
+            <figure>
+              <figcaption>SIG Website</figcaption>
+              <img src= "./SIG.JPG"/>
+            </figure>
+            <figure>
+            <figcaption>Sound Examples</figcaption>
+              <audio controls>
+                <source src="./sound_1.mp3" type="audio/mpeg"/>
+                Your browser does not support the audio element.
+              </audio>
+              <audio controls>
+              <source src="./sound_2.mp3" type="audio/mpeg"/>
+              Your browser does not support the audio element.
+            </audio>
+            </figure>
           </div>
       </div>
         </div>
         <div className = "subBoxGradient">
-              <p className = "subBoxTitle">
+              <div className = "subBoxTitle">
                 <p className = "subBoxText">
                   With this project, we are pushing the boundaries of music production and sound design, 
                   and we can't wait to see what new and unique sounds we can create with this innovative approach.
                 </p>
-              </p>
+              </div>
+              
             </div>
       </>
     )

@@ -16,7 +16,6 @@ function Orbit(props) {
               </a>
             </p>
           <p className = "pageTitle">Release Notes</p>
-          <h3>Orbit Release Notes</h3>
       
           <h5>V1.01 Notes</h5>
           - Fixed GUI lag due to constant repainting of window.

@@ -4,7 +4,6 @@ function FX(props) {
       <div>
         <div className = "textBody">
           <p className = "pageTitle">Korg Minilogue-XD Effects</p>
-          <h2>Korg Minilogue-XD Effects</h2>
      
      <div>
       <li><a className = "listItem" href="https://github.com/BradlyLanducci/Korg-LogueSDK-FX/tree/main/Chorus">Chorus</a></li>
