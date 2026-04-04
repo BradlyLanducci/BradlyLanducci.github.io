@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "esbuild": "0.20.0"
+  },
+  "scripts": {
+    "dev": "esbuild ./src/main.tsx --bundle --watch --outdir=build --serve=3000 --serve-fallback=index.html",
+    "build": "esbuild ./src/main.tsx --bundle --outdir=build --serve-fallback=index.html"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
