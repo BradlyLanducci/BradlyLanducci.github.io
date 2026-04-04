@@ -1,7 +1,9 @@
 const About = () => {
-    const style = {
+    const style: Record<string, any> = {
+        backgroundColor: "transparent",
         color: "white"
     };
+
     return <div style={style}>About</div>;
 };
 

@@ -1,5 +1,10 @@
 const Vain = () => {
-    return <div>Vain</div>;
+    const style: Record<string, any> = {
+        backgroundColor: "transparent",
+        color: "white"
+    };
+
+    return <div style={style}>Vain</div>;
 };
 
 export default Vain;
