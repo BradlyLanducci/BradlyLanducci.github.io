@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { NavBar, Pages } from "./nav_bar.tsx"
+import { NavBar, Pages } from "./components/nav_bar.js"
 
 import * as React from "react";
 import ReactDOM from "react-dom/client";
-import { NavBar } from "./nav_bar.tsx"
+import { NavBar } from "./components/nav_bar.js"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>

@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
-import { NavButton, OnClickFn } from "./nav_button";
+import { NavButton } from "./nav_button";
 
-import About from "./about.tsx"
-import Vain from "./vain.tsx"
-import Music from "./music.tsx"
+import About from "../pages/about"
+import Vain from "../pages/vain"
+import Music from "../pages/music"
 
 export const Pages: Record<string, React.ComponentType> = {
     "about": About,
