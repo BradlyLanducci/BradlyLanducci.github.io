@@ -6,7 +6,7 @@ import Vain from "./vain.tsx"
 import Music from "./music.tsx"
 
 export const Pages: Record<string, React.ComponentType> = {
-    "": About,
+    "about": About,
     "vain_audio": Vain,
     "music": Music
 };

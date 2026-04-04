@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { NavBar, Pages } from "./nav_bar.tsx"
 
 import * as React from "react";
@@ -15,6 +15,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             }}>
                 <NavBar />
                 <Routes>
+                    <Route path="/" element={<Navigate to={`/${Object.keys(Pages)[0]}`} />} />
+
                     {Object.entries(Pages).map(([path, Component]) => (
                         <Route key={path} path={`/${path}`} element={<Component />} />
                     ))}
