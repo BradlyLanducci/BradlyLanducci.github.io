@@ -6,12 +6,10 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "sourceMap": true,
-        "outDir": "build",
         "esModuleInterop": true
     },
     "include": [
-        "src/**/*",
-        "src/main.tsx"
+        "src/**/*"
     ],
     "exclude": [
         "**/*.spec.ts"
