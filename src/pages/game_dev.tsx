@@ -1,6 +1,6 @@
 import { Theme } from "../theme";
 
-const Music = () => {
+const Game = () => {
     const style: Record<string, any> = {
         display: "flex",
         flexDirection: "column",
@@ -23,4 +23,4 @@ const Music = () => {
     </div>;
 };
 
-export default Music;
+export default Game;

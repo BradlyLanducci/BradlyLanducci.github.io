@@ -1,38 +1,43 @@
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { NavButton } from "./nav_button";
 
+import { Theme } from '../theme';
+
 import About from "../pages/about"
-import Vain from "../pages/vain"
+import GameDev from "../pages/game_dev"
 import Music from "../pages/music"
+import Vain from "../pages/vain"
 
 import ProfilePic from "../assets/profile_pic.jpg"
 
 export const Pages: Record<string, React.ComponentType> = {
     "about": About,
     "vain_audio": Vain,
+    "game_dev": GameDev,
     "music": Music
 };
 
-export const NavBar = () => {
+export const Header = () => {
     const navigate = useNavigate();
 
     const rootStyle: Record<string, any> = {
         backgroundColor: "transparent",
         display: "flex",
         flexDirection: "column",
+        alignItems: "center",
         justifyContent: "center",
+        marginTop: "64px",
         width: "100%",
         height: "fit-content"
     };
 
     const profilePicStyle: Record<string, any> = {
         backgroundColor: "transparent",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
+        borderRadius: "50%",
         width: "192px",
-        height: "auto",
-        objectFit: "contain"
+        height: "192px",
+        objectFit: "cover"
     };
 
     const imageContainerStyle: Record<string, any> = {
@@ -41,7 +46,7 @@ export const NavBar = () => {
         flexDirection: "row",
         justifyContent: "center",
         width: "100%",
-        height: "164px",
+        height: "200px",
     };
 
     const navBarStyle: Record<string, any> = {
@@ -53,21 +58,43 @@ export const NavBar = () => {
         height: "fit-content"
     };
 
+    const spacer: Record<string, any> = {
+        backgroundColor: Theme.Color.TextLight,
+        display: "flex",
+        width: Theme.PageWidth,
+        height: "2px",
+    };
+
+    const [selectedPage, setSelectedPage] = useState(Object.keys(Pages)[0])
 
     const routeTo = (path: string) => {
         navigate(`/${path}`);
+        setSelectedPage(path);
     };
 
     return <div style={rootStyle}>
         <div style={imageContainerStyle}>
             <img src={ProfilePic} style={profilePicStyle} />
         </div>
+
+        <div style={{
+            ...spacer, ...{
+                marginTop: "32px"
+            }
+        }} />
+
         <div style={navBarStyle}>
             {
                 Object.entries(Pages).map(([key, _]) => (
-                    <NavButton key={key} text={key} onClick={routeTo} />
+                    <NavButton key={key} text={key} selected={selectedPage == key} onClick={routeTo} />
                 ))
             }
         </div>
+
+        <div style={{
+            ...spacer, ...{
+                marginBottom: "32px"
+            }
+        }} />
     </div>;
 };

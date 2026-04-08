@@ -1,21 +1,22 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { NavBar, Pages } from "./components/nav_bar.js"
+import { Header, Pages } from "./components/header.js"
 
 import * as React from "react";
 import ReactDOM from "react-dom/client";
-import { NavBar } from "./components/nav_bar.js"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
         <BrowserRouter>
             <div style={{
-                backgroundColor: "black",
+                fontFamily: `'vcr', monospace`,
+                background: 'linear-gradient(to top, #000000, #0e0015)',
+                // backgroundColor: 'black',
                 width: "100vw",
                 height: "100vh",
                 display: "flex",
                 flexDirection: "column"
             }}>
-                <NavBar />
+                <Header />
                 <Routes>
                     <Route path="/" element={<Navigate to={`/${Object.keys(Pages)[0]}`} />} />
 
@@ -25,5 +26,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
                 </Routes>
             </div>
         </BrowserRouter>
-    </React.StrictMode>
+    </React.StrictMode >
 );

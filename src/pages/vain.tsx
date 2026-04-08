@@ -1,15 +1,16 @@
+import { Theme } from "../theme";
+
 const Vain = () => {
     const style: Record<string, any> = {
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "black",
-        color: "white",
-        width: "30%",
+        color: Theme.Color.TextLight,
+        width: Theme.PageWidth,
+        fontSize: Theme.MainFontSize,
         margin: "0 auto",
         flex: 1
     };
     return <div style={style}>
-        <div>Vain</div>
         Contrary to popular belief, Lorem Ipsum is not simply random text.
         It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years
         old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up
