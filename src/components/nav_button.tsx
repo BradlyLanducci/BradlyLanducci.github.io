@@ -15,8 +15,14 @@ export const NavButton = ({ text, onClick, selected }: ButtonProps) => {
         padding: "16px 32px 16px 32px",
         cursor: "pointer",
         fontSize: "32px",
-        width: "fit-content",
-        height: "fit-content"
+        display: "flex"
+    };
+
+    const barStyle: Record<string, any> = {
+        backgroundColor: Theme.Color.TextLight,
+        display: "flex",
+        width: "100%",
+        height: "2px",
     };
 
     const capitalize = (str: string) => {
@@ -32,5 +38,19 @@ export const NavButton = ({ text, onClick, selected }: ButtonProps) => {
         onClick(text);
     };
 
-    return <div onClick={handleClick} style={style}>{text.length === 0 ? "Bradly Landucci" : capitalize(text)}</div>;
+    return <div>
+        <div style={{
+            ...barStyle, ...{
+                marginTop: "32px"
+            }
+        }} />
+
+        <div onClick={handleClick} style={style}>{text.length === 0 ? "Bradly Landucci" : capitalize(text)}</div>
+
+        <div style={{
+            ...barStyle, ...{
+                marginBottom: "32px"
+            }
+        }} />
+    </div>
 };

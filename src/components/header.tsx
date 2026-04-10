@@ -12,7 +12,6 @@ import Vain from "../pages/vain"
 import ProfilePic from "../assets/profile_pic.jpg"
 
 export const Pages: Record<string, React.ComponentType> = {
-    "about": About,
     "vain_audio": Vain,
     "game_dev": GameDev,
     "music": Music
@@ -58,13 +57,6 @@ export const Header = () => {
         height: "fit-content"
     };
 
-    const spacer: Record<string, any> = {
-        backgroundColor: Theme.Color.TextLight,
-        display: "flex",
-        width: Theme.PageWidth,
-        height: "2px",
-    };
-
     const [selectedPage, setSelectedPage] = useState(Object.keys(Pages)[0])
 
     const routeTo = (path: string) => {
@@ -77,12 +69,6 @@ export const Header = () => {
             <img src={ProfilePic} style={profilePicStyle} />
         </div>
 
-        <div style={{
-            ...spacer, ...{
-                marginTop: "32px"
-            }
-        }} />
-
         <div style={navBarStyle}>
             {
                 Object.entries(Pages).map(([key, _]) => (
@@ -90,11 +76,5 @@ export const Header = () => {
                 ))
             }
         </div>
-
-        <div style={{
-            ...spacer, ...{
-                marginBottom: "32px"
-            }
-        }} />
-    </div>;
+    </div >;
 };

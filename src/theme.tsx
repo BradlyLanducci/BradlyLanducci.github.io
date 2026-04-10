@@ -3,6 +3,6 @@ export const Theme = {
         TextLight: "#e6e6de",
         TextDark: "black"
     },
-    PageWidth: "30%",
+    PageWidth: "40vw",
     MainFontSize: "18px"
 }

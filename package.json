@@ -6,8 +6,8 @@
     "file-loader": "^6.2.0"
   },
   "scripts": {
-    "dev": "esbuild ./src/main.tsx --bundle --watch --outdir=build --serve=3000 --serve-fallback=index.html --loader:.jpg=file",
-    "build": "esbuild ./src/main.tsx --bundle --outdir=build --loader:.jpg=file"
+    "dev": "esbuild ./src/main.tsx --bundle --watch --outdir=build --serve=3000 --serve-fallback=index.html --loader:.jpg=file --loader:.png=file",
+    "build": "esbuild ./src/main.tsx --bundle --outdir=build --loader:.jpg=file --loader:.png=file"
   },
   "dependencies": {
     "react": "^18.2.0",

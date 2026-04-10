@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
                 background: 'linear-gradient(to top, #000000, #0e0015)',
                 // backgroundColor: 'black',
                 width: "100vw",
-                height: "100vh",
+                minHeight: "100vh",
                 display: "flex",
                 flexDirection: "column"
             }}>

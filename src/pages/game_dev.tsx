@@ -10,16 +10,47 @@ const Game = () => {
         margin: "0 auto",
         flex: 1
     };
+
+    const articleTitle: Record<string, any> = {
+        textAlign: "center"
+    };
+
+    const article: Record<string, any> = {
+        display: "flex",
+        flexDirection: "column",
+        color: Theme.Color.TextLight,
+        width: Theme.PageWidth,
+        fontSize: Theme.MainFontSize,
+        textAlign: "justify",
+        marginBottom: "128px"
+    };
+
+    const video: Record<string, any> = {
+        display: "flex",
+        margin: "0 auto",
+        aspectRatio: "16 / 9",
+        width: "100%",
+        height: "auto"
+    };
+
     return <div style={style}>
-        Contrary to popular belief, Lorem Ipsum is not simply random text.
-        It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years
-        old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up
-        one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
-        the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
-        comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of
-        Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics,
-        very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-        comes from a line in section 1.10.32.
+        <div style={article}>
+            <h1 style={articleTitle}>
+                Anguish
+            </h1>
+            <div>
+                Orbit was my first entry point to developing audio plugins. Although this is not the first iteration of it.
+                At its core it's a simple multi delay line plugin with some novel twists. The UI was masterfully created by
+                Vain Audio co-owner Rami Hansen.
+            </div>
+        </div>
+
+        <div style={article}>
+            <iframe style={video} src="https://www.youtube.com/embed/FvE-7vLOMBs?si=VvmyYH8PpTjJ8zY9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div style={article}>
+            <iframe style={video} src="https://www.youtube.com/embed/z9uwSX7ehvQ?si=zONIiXNRspNkEy_O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>;
 };
 
