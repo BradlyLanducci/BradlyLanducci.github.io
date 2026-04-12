@@ -24474,30 +24474,46 @@
   function isLocation(obj) {
     return typeof obj === "object" && obj != null && "pathname" in obj && "search" in obj && "hash" in obj && "state" in obj && "key" in obj;
   }
-  function createBrowserHistory(options = {}) {
-    function createBrowserLocation(window2, globalHistory) {
-      let maskedLocation = globalHistory.state?.masked;
-      let { pathname, search, hash } = maskedLocation || window2.location;
+  function createHashHistory(options = {}) {
+    function createHashLocation(window2, globalHistory) {
+      let {
+        pathname = "/",
+        search = "",
+        hash = ""
+      } = parsePath(window2.location.hash.substring(1));
+      if (!pathname.startsWith("/") && !pathname.startsWith(".")) {
+        pathname = "/" + pathname;
+      }
       return createLocation(
         "",
         { pathname, search, hash },
         // state defaults to `null` because `window.history.state` does
         globalHistory.state && globalHistory.state.usr || null,
-        globalHistory.state && globalHistory.state.key || "default",
-        maskedLocation ? {
-          pathname: window2.location.pathname,
-          search: window2.location.search,
-          hash: window2.location.hash
-        } : void 0
+        globalHistory.state && globalHistory.state.key || "default"
       );
     }
-    function createBrowserHref(window2, to) {
-      return typeof to === "string" ? to : createPath(to);
+    function createHashHref(window2, to) {
+      let base = window2.document.querySelector("base");
+      let href = "";
+      if (base && base.getAttribute("href")) {
+        let url = window2.location.href;
+        let hashIndex = url.indexOf("#");
+        href = hashIndex === -1 ? url : url.slice(0, hashIndex);
+      }
+      return href + "#" + (typeof to === "string" ? to : createPath(to));
+    }
+    function validateHashLocation(location, to) {
+      warning(
+        location.pathname.charAt(0) === "/",
+        `relative pathnames are not supported in hash history.push(${JSON.stringify(
+          to
+        )})`
+      );
     }
     return getUrlBasedHistory(
-      createBrowserLocation,
-      createBrowserHref,
-      null,
+      createHashLocation,
+      createHashHref,
+      validateHashLocation,
       options
     );
   }
@@ -26539,7 +26555,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }
   } catch (e) {
   }
-  function BrowserRouter({
+  function HashRouter({
     basename,
     children,
     unstable_useTransitions,
@@ -26547,7 +26563,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }) {
     let historyRef = React10.useRef();
     if (historyRef.current == null) {
-      historyRef.current = createBrowserHistory({ window: window2, v5Compat: true });
+      historyRef.current = createHashHistory({ window: window2, v5Compat: true });
     }
     let history = historyRef.current;
     let [state, setStateImpl] = React10.useState({
@@ -27433,7 +27449,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var import_client = __toESM(require_client());
   var import_jsx_runtime5 = __toESM(require_jsx_runtime());
   import_client.default.createRoot(document.getElementById("root")).render(
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(React12.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(BrowserRouter, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { style: {
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(React12.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(HashRouter, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { style: {
       fontFamily: `'vcr', monospace`,
       background: "linear-gradient(to top, #000000, #0e0015)",
       // backgroundColor: 'black',
