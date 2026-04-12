@@ -7,20 +7,20 @@ import { Theme } from '../theme';
 import About from "../pages/about"
 import GameDev from "../pages/game_dev"
 import Music from "../pages/music"
-import Vain from "../pages/vain"
+import AudioDev from "../pages/audio_dev"
 
 import ProfilePic from "../assets/profile_pic.jpg"
+import Github from "../assets/github.png"
 
 export const Pages: Record<string, React.ComponentType> = {
-    "vain_audio": Vain,
-    "game_dev": GameDev,
-    "music": Music
+    "audio_dev": AudioDev,
+    "game_dev": GameDev
 };
 
 export const Header = () => {
     const navigate = useNavigate();
 
-    const rootStyle: Record<string, any> = {
+    const root: Record<string, any> = {
         backgroundColor: "transparent",
         display: "flex",
         flexDirection: "column",
@@ -31,7 +31,18 @@ export const Header = () => {
         height: "fit-content"
     };
 
-    const profilePicStyle: Record<string, any> = {
+    const profileContainer: Record<string, any> = {
+        backgroundColor: "transparent",
+        color: Theme.Color.TextLight,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        height: "200px",
+    };
+
+    const profile: Record<string, any> = {
         backgroundColor: "transparent",
         borderRadius: "50%",
         width: "192px",
@@ -39,16 +50,26 @@ export const Header = () => {
         objectFit: "cover"
     };
 
-    const imageContainerStyle: Record<string, any> = {
+    const githubContainer: Record<string, any> = {
         backgroundColor: "transparent",
+        color: Theme.Color.TextLight,
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
+        alignItems: "center",
         width: "100%",
         height: "200px",
     };
 
-    const navBarStyle: Record<string, any> = {
+    const githubPic: Record<string, any> = {
+        backgroundColor: "transparent",
+        borderRadius: "50%",
+        width: "32px",
+        height: "32px",
+        objectFit: "cover"
+    };
+
+    const navBar: Record<string, any> = {
         backgroundColor: "transparent",
         display: "flex",
         flexDirection: "row",
@@ -64,12 +85,16 @@ export const Header = () => {
         setSelectedPage(path);
     };
 
-    return <div style={rootStyle}>
-        <div style={imageContainerStyle}>
-            <img src={ProfilePic} style={profilePicStyle} />
+    return <div style={root}>
+        <div style={profileContainer}>
+            <img src={ProfilePic} style={profile} />
+            <div style={githubContainer}>
+                <img src={Github} style={githubPic} />
+                /BradlyLanducci
+            </div>
         </div>
 
-        <div style={navBarStyle}>
+        <div style={navBar}>
             {
                 Object.entries(Pages).map(([key, _]) => (
                     <NavButton key={key} text={key} selected={selectedPage == key} onClick={routeTo} />

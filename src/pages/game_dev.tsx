@@ -39,9 +39,10 @@ const Game = () => {
                 Anguish
             </h1>
             <div>
-                Orbit was my first entry point to developing audio plugins. Although this is not the first iteration of it.
-                At its core it's a simple multi delay line plugin with some novel twists. The UI was masterfully created by
-                Vain Audio co-owner Rami Hansen.
+                Another passion of mine is game development. Ever since I was a kid I was writing quests for
+                imaginary games. I've recently gone back to my roots and been working on an action RPG with
+                a story focus. I've created some dev logs that focus on some more technical aspects I find
+                interesting.
             </div>
         </div>
 
