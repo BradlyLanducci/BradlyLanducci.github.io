@@ -47,10 +47,10 @@ const Game = () => {
         </div>
 
         <div style={article}>
-            <iframe style={video} src="https://www.youtube.com/embed/FvE-7vLOMBs?si=VvmyYH8PpTjJ8zY9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe style={video} src="https://www.youtube.com/embed/FvE-7vLOMBs?si=VvmyYH8PpTjJ8zY9" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
         <div style={article}>
-            <iframe style={video} src="https://www.youtube.com/embed/z9uwSX7ehvQ?si=zONIiXNRspNkEy_O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe style={video} src="https://www.youtube.com/embed/z9uwSX7ehvQ?si=zONIiXNRspNkEy_O" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
     </div>;
 };

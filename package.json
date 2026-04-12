@@ -3,13 +3,14 @@
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "cpx": "^1.5.0",
     "esbuild": "0.20.0",
     "file-loader": "^6.2.0",
     "gh-pages": "^6.3.0"
   },
   "scripts": {
     "dev": "esbuild ./src/main.tsx --bundle --watch --outdir=build --serve=3000 --serve-fallback=index.html --loader:.jpg=file --loader:.png=file",
-    "build": "esbuild ./src/main.tsx --bundle --outdir=build --loader:.jpg=file --loader:.png=file",
+    "build": "esbuild src/main.tsx --bundle --outdir=build --loader:.png=file --loader:.jpg=file && cpx index.html build/",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {

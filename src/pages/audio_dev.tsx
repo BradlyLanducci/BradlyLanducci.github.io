@@ -70,7 +70,7 @@ const AudioDev = () => {
             <a style={centeredLink} href="https://vainaudio.com/product/pft/">
                 Product Page
             </a>
-            <iframe style={video} src="https://www.youtube.com/embed/TE79yyfpGpw?si=u442Qb5E6OVEqPAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe style={video} src="https://www.youtube.com/embed/TE79yyfpGpw?si=u442Qb5E6OVEqPAc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             <div>
                 For this project, I implemented a range of filters, including custom-derived Chebyshev and Butterworth designs,
                 along with AM, RM, and comb filtering.

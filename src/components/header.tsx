@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { NavButton } from "./nav_button";
 
@@ -78,11 +78,11 @@ export const Header = () => {
         height: "fit-content"
     };
 
-    const [selectedPage, setSelectedPage] = useState(Object.keys(Pages)[0])
+    const location = useLocation();
+    const selectedPage = location.pathname.replace("/", "");
 
     const routeTo = (path: string) => {
         navigate(`/${path}`);
-        setSelectedPage(path);
     };
 
     return <div style={root}>
