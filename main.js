@@ -1084,7 +1084,7 @@
             }
             return dispatcher.useContext(Context);
           }
-          function useState6(initialState) {
+          function useState5(initialState) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useState(initialState);
           }
@@ -1887,7 +1887,7 @@
           exports.useMemo = useMemo5;
           exports.useReducer = useReducer;
           exports.useRef = useRef5;
-          exports.useState = useState6;
+          exports.useState = useState5;
           exports.useSyncExternalStore = useSyncExternalStore;
           exports.useTransition = useTransition;
           exports.version = ReactVersion;
@@ -27177,9 +27177,6 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     return matchPath(path.pathname, nextPath) != null || matchPath(path.pathname, currentPath) != null;
   }
 
-  // src/components/header.tsx
-  var import_react = __toESM(require_react());
-
   // src/theme.tsx
   var Theme = {
     Color: {
@@ -27266,8 +27263,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h1", { style: articleTitle, children: "Anguish" }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { children: "Another passion of mine is game development. Ever since I was a kid I was writing quests for imaginary games. I've recently gone back to my roots and been working on an action RPG with a story focus. I've created some dev logs that focus on some more technical aspects I find interesting." })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { style: article, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("iframe", { style: video, src: "https://www.youtube.com/embed/FvE-7vLOMBs?si=VvmyYH8PpTjJ8zY9", title: "YouTube video player", frameborder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", referrerpolicy: "strict-origin-when-cross-origin", allowfullscreen: true }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { style: article, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("iframe", { style: video, src: "https://www.youtube.com/embed/z9uwSX7ehvQ?si=zONIiXNRspNkEy_O", title: "YouTube video player", frameborder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", referrerpolicy: "strict-origin-when-cross-origin", allowfullscreen: true }) })
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { style: article, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("iframe", { style: video, src: "https://www.youtube.com/embed/FvE-7vLOMBs?si=VvmyYH8PpTjJ8zY9", title: "YouTube video player", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", referrerPolicy: "strict-origin-when-cross-origin", allowFullScreen: true }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { style: article, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("iframe", { style: video, src: "https://www.youtube.com/embed/z9uwSX7ehvQ?si=zONIiXNRspNkEy_O", title: "YouTube video player", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", referrerPolicy: "strict-origin-when-cross-origin", allowFullScreen: true }) })
     ] });
   };
   var game_dev_default = Game;
@@ -27333,7 +27330,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { style: article, children: [
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { style: articleTitle, children: "PFT" }),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { style: centeredLink, href: "https://vainaudio.com/product/pft/", children: "Product Page" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("iframe", { style: video, src: "https://www.youtube.com/embed/TE79yyfpGpw?si=u442Qb5E6OVEqPAc", title: "YouTube video player", frameborder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", referrerpolicy: "strict-origin-when-cross-origin", allowfullscreen: true }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("iframe", { style: video, src: "https://www.youtube.com/embed/TE79yyfpGpw?si=u442Qb5E6OVEqPAc", title: "YouTube video player", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", referrerPolicy: "strict-origin-when-cross-origin", allowFullScreen: true }),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { children: "For this project, I implemented a range of filters, including custom-derived Chebyshev and Butterworth designs, along with AM, RM, and comb filtering." })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { style: article, children: [
@@ -27427,10 +27424,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       width: "100%",
       height: "fit-content"
     };
-    const [selectedPage, setSelectedPage] = (0, import_react.useState)(Object.keys(Pages)[0]);
+    const location = useLocation();
+    const selectedPage = location.pathname.replace("/", "");
     const routeTo = (path) => {
       navigate(`/${path}`);
-      setSelectedPage(path);
     };
     return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: root, children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: profileContainer, children: [
@@ -27452,7 +27449,6 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(React12.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(HashRouter, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { style: {
       fontFamily: `'vcr', monospace`,
       background: "linear-gradient(to top, #000000, #0e0015)",
-      // backgroundColor: 'black',
       width: "100vw",
       minHeight: "100vh",
       display: "flex",
