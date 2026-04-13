@@ -27434,7 +27434,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: root, children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: profileContainer, children: [
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("img", { src: profile_pic_default, style: profile }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: githubContainer, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("a", { href: "https://github.com/BradlyLanducci", style: githubContainer, children: [
           /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("img", { src: github_default, style: githubPic }),
           "/BradlyLanducci"
         ] })
