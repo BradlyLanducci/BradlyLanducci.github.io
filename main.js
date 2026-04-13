@@ -27183,9 +27183,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       TextLight: "#e6e6de",
       TextDark: "black"
     },
-    PageWidth: "40vw",
     MainFontSize: "18px"
   };
+  var getPageWidth = () => window.innerWidth <= 768 ? "90vw" : "40vw";
 
   // src/components/nav_button.tsx
   var import_jsx_runtime = __toESM(require_jsx_runtime());
@@ -27196,7 +27196,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       padding: "16px 32px 16px 32px",
       cursor: "pointer",
       fontSize: "32px",
-      display: "flex"
+      display: "flex",
+      justifyContent: "center",
+      textAlign: "center"
     };
     const barStyle = {
       backgroundColor: Theme.Color.TextLight,
@@ -27234,7 +27236,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       display: "flex",
       flexDirection: "column",
       color: Theme.Color.TextLight,
-      width: Theme.PageWidth,
+      width: getPageWidth(),
       fontSize: Theme.MainFontSize,
       margin: "0 auto",
       flex: 1
@@ -27246,7 +27248,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       display: "flex",
       flexDirection: "column",
       color: Theme.Color.TextLight,
-      width: Theme.PageWidth,
+      width: getPageWidth(),
       fontSize: Theme.MainFontSize,
       textAlign: "justify",
       marginBottom: "128px"
@@ -27285,7 +27287,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       display: "flex",
       flexDirection: "column",
       color: Theme.Color.TextLight,
-      width: Theme.PageWidth,
+      width: getPageWidth(),
       fontSize: Theme.MainFontSize,
       margin: "0 auto",
       flex: 1
@@ -27297,7 +27299,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       display: "flex",
       flexDirection: "column",
       color: Theme.Color.TextLight,
-      width: Theme.PageWidth,
+      width: getPageWidth(),
       fontSize: Theme.MainFontSize,
       textAlign: "justify",
       marginBottom: "128px"
@@ -27310,7 +27312,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       height: "auto"
     };
     const image = {
-      width: Theme.PageWidth
+      width: getPageWidth()
     };
     const centeredLink = {
       color: Theme.Color.TextLight,
