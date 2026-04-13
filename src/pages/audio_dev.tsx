@@ -1,4 +1,4 @@
-import { Theme } from "../theme";
+import { Theme, getPageWidth } from "../theme";
 
 import Orbit from "../assets/orbit.png"
 import OrangeGate from "../assets/orange_gate.png"
@@ -9,7 +9,7 @@ const AudioDev = () => {
         display: "flex",
         flexDirection: "column",
         color: Theme.Color.TextLight,
-        width: Theme.PageWidth,
+        width: getPageWidth(),
         fontSize: Theme.MainFontSize,
         margin: "0 auto",
         flex: 1
@@ -23,7 +23,7 @@ const AudioDev = () => {
         display: "flex",
         flexDirection: "column",
         color: Theme.Color.TextLight,
-        width: Theme.PageWidth,
+        width: getPageWidth(),
         fontSize: Theme.MainFontSize,
         textAlign: "justify",
         marginBottom: "128px"
@@ -38,7 +38,7 @@ const AudioDev = () => {
     };
 
     const image: Record<string, any> = {
-        width: Theme.PageWidth,
+        width: getPageWidth(),
     };
 
     const centeredLink: Record<string, any> = {

@@ -1,4 +1,4 @@
-import { Theme } from "../theme"
+import { Theme, getPageWidth } from "../theme"
 
 export type OnClickFn = (path: string) => void;
 
@@ -15,14 +15,16 @@ export const NavButton = ({ text, onClick, selected }: ButtonProps) => {
         padding: "16px 32px 16px 32px",
         cursor: "pointer",
         fontSize: "32px",
-        display: "flex"
+        display: "flex",
+        justifyContent: "center",
+        textAlign: "center"
     };
 
     const barStyle: Record<string, any> = {
         backgroundColor: Theme.Color.TextLight,
         display: "flex",
         width: "100%",
-        height: "2px",
+        height: "2px"
     };
 
     const capitalize = (str: string) => {

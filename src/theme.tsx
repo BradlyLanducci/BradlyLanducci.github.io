@@ -3,6 +3,8 @@ export const Theme = {
         TextLight: "#e6e6de",
         TextDark: "black"
     },
-    PageWidth: "40vw",
     MainFontSize: "18px"
 }
+
+export const getPageWidth = () =>
+    window.innerWidth <= 768 ? "90vw" : "40vw";

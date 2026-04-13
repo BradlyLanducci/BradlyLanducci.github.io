@@ -1,4 +1,4 @@
-import { Theme } from "../theme";
+import { Theme, getPageWidth } from "../theme";
 
 const About = () => {
     const style: Record<string, any> = {
@@ -6,7 +6,7 @@ const About = () => {
         flexDirection: "column",
         color: Theme.Color.TextLight,
         fontSize: Theme.MainFontSize,
-        width: Theme.PageWidth,
+        width: getPageWidth(),
         margin: "0 auto",
         flex: 1
     };

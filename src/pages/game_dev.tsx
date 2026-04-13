@@ -1,11 +1,11 @@
-import { Theme } from "../theme";
+import { Theme, getPageWidth } from "../theme";
 
 const Game = () => {
     const style: Record<string, any> = {
         display: "flex",
         flexDirection: "column",
         color: Theme.Color.TextLight,
-        width: Theme.PageWidth,
+        width: getPageWidth(),
         fontSize: Theme.MainFontSize,
         margin: "0 auto",
         flex: 1
@@ -19,7 +19,7 @@ const Game = () => {
         display: "flex",
         flexDirection: "column",
         color: Theme.Color.TextLight,
-        width: Theme.PageWidth,
+        width: getPageWidth(),
         fontSize: Theme.MainFontSize,
         textAlign: "justify",
         marginBottom: "128px"

@@ -1,8 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useState } from 'react';
 import { NavButton } from "./nav_button";
 
-import { Theme } from '../theme';
+import { Theme, getPageWidth } from '../theme';
 
 import About from "../pages/about"
 import GameDev from "../pages/game_dev"
