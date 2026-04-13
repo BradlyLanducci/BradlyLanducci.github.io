@@ -87,10 +87,10 @@ export const Header = () => {
     return <div style={root}>
         <div style={profileContainer}>
             <img src={ProfilePic} style={profile} />
-            <div style={githubContainer}>
+            <a href="https://github.com/BradlyLanducci" style={githubContainer}>
                 <img src={Github} style={githubPic} />
                 /BradlyLanducci
-            </div>
+            </a>
         </div>
 
         <div style={navBar}>
