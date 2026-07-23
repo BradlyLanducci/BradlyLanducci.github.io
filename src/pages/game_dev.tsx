@@ -89,7 +89,7 @@ const Game = () => {
             </h2>
             <div>
                 I've started to use this game engine for game jams. It's a lot more difficult to work with since it has no UI, but my partner and I managed to make a submission to a <a href="https://itch.io/jam/micro-jam-061" style={link}>48 Hour Microjam</a> called
-                <a href="https://therealbananaboys.itch.io/revenge-on-monkey-island" style={link}>Revenge on Monkey Island</a>. This was a super fun experience and proved that the engine could in fact make a game!
+                <a href="https://therealbananaboys.itch.io/revenge-on-monkey-island" style={link}> Revenge on Monkey Island</a>. This was a super fun experience and proved that the engine could in fact make a game!
             </div>
             <img src={BananaManorigins1} style={image} />
             <img src={BananaManorigins2} style={image} />
