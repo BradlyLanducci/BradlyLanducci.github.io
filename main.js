@@ -27304,7 +27304,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           "I've started to use this game engine for game jams. It's a lot more difficult to work with since it has no UI, but my partner and I managed to make a submission to a ",
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "https://itch.io/jam/micro-jam-061", style: link, children: "48 Hour Microjam" }),
           " called",
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "https://therealbananaboys.itch.io/revenge-on-monkey-island", style: link, children: "Revenge on Monkey Island" }),
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "https://therealbananaboys.itch.io/revenge-on-monkey-island", style: link, children: " Revenge on Monkey Island" }),
           ". This was a super fun experience and proved that the engine could in fact make a game!"
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("img", { src: bananaman_origins_2_default, style: image }),
