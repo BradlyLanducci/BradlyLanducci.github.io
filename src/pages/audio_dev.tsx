@@ -113,6 +113,21 @@ const AudioDev = () => {
             ground up, featuring sample-accurate ADSR envelopes and signal-triggered filtering for tight, responsive
             dynamics control in real time.
         </div>
+        <div style={article}>
+            <h1 style={articleTitle}>
+                Fogbank (KVR Dev Challenge 2026)
+            </h1>
+            <a style={centeredLink} href="https://vainaudio.com/product/fogbank/">
+                Product Page
+            </a>
+            <iframe style={video} src="https://www.youtube.com/embed/2lgKNEUUSDI?si=uPwsmFg2cpdEg9pM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <div>
+                Fogbank is an interesting take on parameter modulation.
+                It features three different serially processed modules where you can choose from a selection of various different effects. Each of these has some
+                set of parameters which can further be modulated using a 2D vector space. You can then automate the 2D vector space through LFO's and such, but I'll
+                save the rest of the explanation for the video...  We had less than two months to develop this and I'm very happy with how it turned out.
+            </div>
+        </div>
     </div>;
 };
 
