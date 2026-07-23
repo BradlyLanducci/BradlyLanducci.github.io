@@ -27229,6 +27229,12 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ] });
   };
 
+  // src/assets/bananaman_origins_2.png
+  var bananaman_origins_2_default = "./bananaman_origins_2-JPQK24KK.png";
+
+  // src/assets/bananaman_origins_1.png
+  var bananaman_origins_1_default = "./bananaman_origins_1-HXPSXQZN.png";
+
   // src/pages/game_dev.tsx
   var import_jsx_runtime2 = __toESM(require_jsx_runtime());
   var Game = () => {
@@ -27260,13 +27266,50 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       width: "100%",
       height: "auto"
     };
+    const link = {
+      color: Theme.Color.TextLight,
+      fontSize: Theme.MainFontSize,
+      display: "inline"
+    };
+    const image = {
+      paddingTop: "16px",
+      width: getPageWidth()
+    };
     return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { style, children: [
       /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { style: article, children: [
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h1", { style: articleTitle, children: "Anguish" }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { children: "Another passion of mine is game development. Ever since I was a kid I was writing quests for imaginary games. I've recently gone back to my roots and been working on an action RPG with a story focus. I've created some dev logs that focus on some more technical aspects I find interesting." })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { style: article, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("iframe", { style: video, src: "https://www.youtube.com/embed/FvE-7vLOMBs?si=VvmyYH8PpTjJ8zY9", title: "YouTube video player", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", referrerPolicy: "strict-origin-when-cross-origin", allowFullScreen: true }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { style: article, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("iframe", { style: video, src: "https://www.youtube.com/embed/z9uwSX7ehvQ?si=zONIiXNRspNkEy_O", title: "YouTube video player", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", referrerPolicy: "strict-origin-when-cross-origin", allowFullScreen: true }) })
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { style: article, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("iframe", { style: video, src: "https://www.youtube.com/embed/z9uwSX7ehvQ?si=zONIiXNRspNkEy_O", title: "YouTube video player", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", referrerPolicy: "strict-origin-when-cross-origin", allowFullScreen: true }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { style: article, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h1", { style: articleTitle, children: "2D Game Engine" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
+          "When I'm itching to do technical game dev work I work on my ",
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "https://github.com/BradlyLanducci/anguish_engine", style: link, children: "C++ 2D Game Engine" }),
+          " which features:",
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("ul", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("li", { children: "Collision detection and handling, spritesheet animations using OpenGL, and object memory management" }),
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("li", { children: "Object tree architecture with built in memory management." }),
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("li", { children: "OpenGL texture rendering" }),
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("li", { children: "Spritesheet animations" }),
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("li", { children: "Audio effects pipeline" }),
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("li", { children: "Input handling" })
+          ] })
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { style: article, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h2", { style: articleTitle, children: "BananaMan Origins" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
+          "I've started to use this game engine for game jams. It's a lot more difficult to work with since it has no UI, but my partner and I managed to make a submission to a ",
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "https://itch.io/jam/micro-jam-061", style: link, children: "48 Hour Microjam" }),
+          " called",
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { href: "https://therealbananaboys.itch.io/revenge-on-monkey-island", style: link, children: "Revenge on Monkey Island" }),
+          ". This was a super fun experience and proved that the engine could in fact make a game!"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("img", { src: bananaman_origins_2_default, style: image }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("img", { src: bananaman_origins_1_default, style: image })
+      ] })
     ] });
   };
   var game_dev_default = Game;
@@ -27355,6 +27398,12 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { style: centeredLink, href: "https://vainaudio.com/product/orange-gate/", children: "Product Page" }),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("img", { src: orange_gate_default, style: image }),
         "A compact two-in-one gate and compressor focused on precision. I implemented both DSP effects from the ground up, featuring sample-accurate ADSR envelopes and signal-triggered filtering for tight, responsive dynamics control in real time."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { style: article, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { style: articleTitle, children: "Fogbank (KVR Dev Challenge 2026)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { style: centeredLink, href: "https://vainaudio.com/product/fogbank/", children: "Product Page" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("iframe", { style: video, src: "https://www.youtube.com/embed/2lgKNEUUSDI?si=uPwsmFg2cpdEg9pM", title: "YouTube video player", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", referrerPolicy: "strict-origin-when-cross-origin", allowFullScreen: true }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { children: "Fogbank is an interesting take on parameter modulation. It features three different serially processed modules where you can choose from a selection of various different effects. Each of these has some set of parameters which can further be modulated using a 2D vector space. You can then automate the 2D vector space through LFO's and such, but I'll save the rest of the explanation for the video...  We had less than two months to develop this and I'm very happy with how it turned out." })
       ] })
     ] });
   };
