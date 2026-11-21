@@ -1,9 +1,12 @@
 import { Theme, getPageWidth } from "../theme";
+import { useNavigate } from 'react-router-dom';
 
 import BananaManorigins1 from "../assets/bananaman_origins_2.png"
 import BananaManorigins2 from "../assets/bananaman_origins_1.png"
 
 const Game = () => {
+    const navigate = useNavigate();
+
     const style: Record<string, any> = {
         display: "flex",
         flexDirection: "column",
@@ -47,6 +50,14 @@ const Game = () => {
         width: getPageWidth(),
     };
 
+    const centeredLink: Record<string, any> = {
+        color: Theme.Color.TextLight,
+        margin: "0 auto",
+        fontSize: Theme.MainFontSize,
+        cursor: "pointer",
+        textDecoration: "underline"
+    };
+
     return <div style={style}>
         <div style={article}>
             <h1 style={articleTitle}>
@@ -59,6 +70,19 @@ const Game = () => {
                 interesting.
             </div>
         </div>
+
+        <h2>
+            Modular Spell System
+        </h2>
+        <div>
+            test
+        </div>
+        <a style={centeredLink} onClick={() => {
+            navigate(`/spell_system`);
+        }
+        }>
+            Learn More
+        </a>
 
         <div style={article}>
             <iframe style={video} src="https://www.youtube.com/embed/FvE-7vLOMBs?si=VvmyYH8PpTjJ8zY9" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>

@@ -7,4 +7,4 @@ export const Theme = {
 }
 
 export const getPageWidth = () =>
-    window.innerWidth <= 768 ? "90vw" : "40vw";
+    window.innerWidth <= 768 ? "90vw" : "60vw";

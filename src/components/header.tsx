@@ -1,19 +1,19 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { NavButton } from "./nav_button";
 
-import { Theme, getPageWidth } from '../theme';
+import { Theme } from '../theme';
 
-import About from "../pages/about"
 import GameDev from "../pages/game_dev"
-import Music from "../pages/music"
 import AudioDev from "../pages/audio_dev"
+import SpellSystem from "../pages/spell_system"
 
 import ProfilePic from "../assets/profile_pic.jpg"
 import Github from "../assets/github.png"
 
 export const Pages: Record<string, React.ComponentType> = {
     "audio_dev": AudioDev,
-    "game_dev": GameDev
+    "game_dev": GameDev,
+    "spell_system": SpellSystem
 };
 
 export const Header = () => {
@@ -95,7 +95,7 @@ export const Header = () => {
 
         <div style={navBar}>
             {
-                Object.entries(Pages).map(([key, _]) => (
+                Object.entries(["audio_dev", "game_dev"]).map(([_, key]) => (
                     <NavButton key={key} text={key} selected={selectedPage == key} onClick={routeTo} />
                 ))
             }
