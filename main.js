@@ -54689,7 +54689,7 @@ class_name DamageBehavior extends IBehavior
 func setup(context: SpellContext) -> void:
     context.damage += damage
 
-func execute(_context: SpellContext) -> void:
+func execute(context: SpellContext) -> void:
     context.damage += damage
 `
           }
