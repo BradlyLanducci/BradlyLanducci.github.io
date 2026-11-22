@@ -29,21 +29,11 @@ const AudioDev = () => {
         marginBottom: "128px"
     };
 
-    const articleText: Record<string, any> = {
-        display: "flex",
-        flexDirection: "column",
-        color: Theme.Color.TextLight,
-        width: "60%",
-        fontSize: Theme.MainFontSize,
-        textAlign: "justify",
-        marginBottom: "128px"
-    };
-
     const video: Record<string, any> = {
         display: "flex",
         margin: "0 auto",
         aspectRatio: "16 / 9",
-        width: "40%",
+        width: "100%",
         height: "auto"
     };
 
@@ -56,7 +46,6 @@ const AudioDev = () => {
         margin: "0 auto",
         fontSize: Theme.MainFontSize
     };
-
     const link: Record<string, any> = {
         color: Theme.Color.TextLight,
         fontSize: Theme.MainFontSize,
@@ -69,7 +58,7 @@ const AudioDev = () => {
                 Vain Audio
             </h1>
             <div>
-                Founded in 2022, Rami Hansen and I have been building audio software together. I mainly
+                Founded in 2022, my long-time friend Rami Hansen and I have been building audio software together. I mainly
                 focus on DSP, while he handles the UI side. We distribute our work independently and on MuseHub, where we've
                 reached over 40,000 downloads.
             </div>
@@ -78,20 +67,14 @@ const AudioDev = () => {
             <h1 style={articleTitle}>
                 PFT
             </h1>
-            <div style={{
-                display: "flex",
-                flexDirection: "row",
-                gap: "10px"
-            }}>
-                <iframe style={video} src="https://www.youtube.com/embed/TE79yyfpGpw?si=u442Qb5E6OVEqPAc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                <div style={articleText}>
-                    For this project, I implemented a range of filters, including custom-derived Chebyshev and Butterworth designs,
-                    along with AM, RM, and comb filtering.
-                </div>
-            </div>
             <a style={centeredLink} href="https://vainaudio.com/product/pft/">
                 Product Page
             </a>
+            <iframe style={video} src="https://www.youtube.com/embed/TE79yyfpGpw?si=u442Qb5E6OVEqPAc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            <div>
+                For this project, I implemented a range of filters, including custom-derived Chebyshev and Butterworth designs,
+                along with AM, RM, and comb filtering.
+            </div>
         </div>
         <div style={article}>
             <h1 style={articleTitle}>

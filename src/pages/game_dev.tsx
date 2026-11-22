@@ -71,19 +71,6 @@ const Game = () => {
             </div>
         </div>
 
-        <h2>
-            Modular Spell System
-        </h2>
-        <div>
-            test
-        </div>
-        <a style={centeredLink} onClick={() => {
-            navigate(`/spell_system`);
-        }
-        }>
-            Learn More
-        </a>
-
         <div style={article}>
             <iframe style={video} src="https://www.youtube.com/embed/FvE-7vLOMBs?si=VvmyYH8PpTjJ8zY9" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
