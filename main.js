@@ -53416,13 +53416,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var Post = ({ title, image, endpoint }) => {
     const navigate = useNavigate();
     return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_jsx_runtime4.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { style: { textAlign: "center" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h1", { children: title }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h3", { children: title }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("img", { style: {
         width: "100%"
       }, src: image, alt: "Anguish Screenshot" }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("a", { style: { cursor: "pointer", textDecoration: "underline" }, onClick: () => {
         navigate("/" + endpoint);
-      }, children: "Learn More" })
+      }, children: "Read" })
     ] }) });
   };
   var Blog = () => {
@@ -54654,8 +54654,7 @@ func execute() -> void:
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h2", { children: "Spell Context" }),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { children: [
-        "So, you have some DamageBehavior which simply defines how much damage this spell should apply. You could simply pass in a target character to apply damage to, but then what if this spell summoned a ring of fire at the cursor location and damaged nearby enemies? What if you wanted to define a new behavior PercentDamageBehavior that is a conditionally added upgrade which adds 50% extra damage based on the total damage? This problem introduces the need to persist contextual information throughout the behaviors.",
-        "To solve this you can create a SpellContext which is passed through all behaviors allowing them to make modifications and share information.",
+        "So, you have some DamageBehavior which simply defines how much damage this spell should apply. You could simply pass in a target character to apply damage to, but then what if this spell summoned a ring of fire at the cursor location and damaged nearby enemies? What if you wanted to define a new behavior PercentDamageBehavior that is a conditionally added upgrade which adds 50% extra damage based on the total damage? This problem introduces the need to persist contextual information throughout the behaviors. To solve this you can create a SpellContext which is passed through all behaviors allowing them to make modifications and share information.",
         /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
           CodeBlock,
           {
@@ -54708,7 +54707,7 @@ func execute(context: SpellContext) -> void:
 `
           }
         ),
-        "You may have noticed, but this has now introduced order dependency of behaviors. If you were to add the PercentDamageBehavior to be processed first then it would do nothing. This may not be a problem for you, but I opted to create a separate setup function in IBehavior which allows for a pre-execution configuration. This makes the example:",
+        "You may have noticed that this has introduced order dependency of behaviors. If you were to add the PercentDamageBehavior to be processed first then it would do nothing. This may not be a problem for you, but I opted to create a separate setup function in IBehavior which allows for a pre-execution configuration. This makes the example:",
         /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
           CodeBlock,
           {
@@ -54758,15 +54757,15 @@ func execute(context: SpellContext) -> void:
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h2", { children: "Building More Complex Spells" }),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { children: [
+        "What we've gone over in this post is still just the beginning of the usefulness of this design. I would be lying if I said that this system comes at no cost. It is still complex and can be difficult to debug especially when you start creating intricate behavioral hierarchies. However, I have found that I've been able to move quicker and most importantly create more interesting spells.",
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Spacer, {}),
         "A couple of useful additions that I added to this design were:",
         /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("ul", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("li", { children: "Recursive child behaviors" }),
           /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("li", { children: "Behaviors that execute sub-behaviors at specific points in time" }),
           /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("li", { children: "Behavior Requirements" })
         ] }),
-        "All of which using the strategy design pattern were very straight forward to implement.",
-        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Spacer, {}),
-        "I would be lying if I said that this system comes at no cost. This system is still fairly complex and can be difficult to debug especially when you start creating intricate behavioral hierarchies. However, I have found that I've been able to move quicker and most importantly create more interesting spells."
+        "All of which using the strategy design pattern were very straight forward to implement."
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", {})
     ] });
