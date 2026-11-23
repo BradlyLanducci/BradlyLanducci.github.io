@@ -14,13 +14,13 @@ const Post = ({ title, image, endpoint }: PostProps) => {
     return (
         <>
             <div style={{ textAlign: "center" }}>
-                <h1>{title}</h1>
+                <h3>{title}</h3>
                 <img style={{
                     width: '100%',
                 }} src={image} alt="Anguish Screenshot" />
                 <a style={{ cursor: "pointer", textDecoration: "underline" }} onClick={() => {
                     navigate("/" + endpoint);
-                }}>Learn More</a>
+                }}>Read</a>
             </div>
         </>
     )

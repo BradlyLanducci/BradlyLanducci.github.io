@@ -193,11 +193,8 @@ func execute() -> void:
             So, you have some DamageBehavior which simply defines how much damage this spell should apply. You could simply pass in a target character
             to apply damage to, but then what if this spell summoned a ring of fire at the cursor location and damaged nearby enemies? What if you wanted
             to define a new behavior PercentDamageBehavior that is a conditionally added upgrade which adds 50% extra damage based on the total
-            damage? This problem introduces the need to persist contextual information throughout the behaviors.
-
-            {/* PercentDamageBehavior */}
-
-            To solve this you can create a SpellContext which is passed through all behaviors allowing them to make modifications and share information.
+            damage? This problem introduces the need to persist contextual information throughout the behaviors. To solve this you can create a SpellContext
+            which is passed through all behaviors allowing them to make modifications and share information.
 
             {/* Passing SpellContext */}
             <CodeBlock codeText=
@@ -251,7 +248,7 @@ func execute(context: SpellContext) -> void:
 `}
             />
 
-            You may have noticed, but this has now introduced order dependency of behaviors. If you were to add the PercentDamageBehavior to be
+            You may have noticed that this has introduced order dependency of behaviors. If you were to add the PercentDamageBehavior to be
             processed first then it would do nothing. This may not be a problem for you, but I opted to create a separate setup function in
             IBehavior which allows for a pre-execution configuration. This makes the example:
 
@@ -301,6 +298,13 @@ func execute(context: SpellContext) -> void:
         <h2>Building More Complex Spells</h2>
 
         <div>
+            What we've gone over in this post is still just the beginning of the usefulness of this design. I would be
+            lying if I said that this system comes at no cost. It is still complex and can be difficult to debug especially
+            when you start creating intricate behavioral hierarchies. However, I have found that I've been able to move
+            quicker and most importantly create more interesting spells.
+
+            <Spacer />
+
             A couple of useful additions that I added to this design were:
             <ul>
                 <li>Recursive child behaviors</li>
@@ -309,12 +313,6 @@ func execute(context: SpellContext) -> void:
             </ul>
 
             All of which using the strategy design pattern were very straight forward to implement.
-
-            <Spacer />
-
-            I would be lying if I said that this system comes at no cost. This system is still fairly complex and can be difficult to
-            debug especially when you start creating intricate behavioral hierarchies. However, I have found that I've
-            been able to move quicker and most importantly create more interesting spells.
         </div>
         <div>
         </div>
